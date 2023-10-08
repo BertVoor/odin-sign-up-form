@@ -31,32 +31,36 @@
 					<h1>Let's do this!</h1>
 					<form action="#" method="post">
 						<label for="firstName"
-							>first name<input type="text" name="firstName" id="firstName"
+							>first name<input type="text" name="firstName" id="firstName" minlength="2"
 						/></label>
 
 						<label for="lastName"
-							>last name<input type="text" name="lastName" id="lastName"
+							>last name<input type="text" name="lastName" id="lastName" minlength="2" 
 						/></label>
 
-						<label for="email">email<input type="email" name="email" id="email" /></label>
+						<label for="email">email<input type="email" name="email" id="email" required /></label>
 
 						<label for="phone">phone number<input type="tel" name="phone" id="phone" /></label>
 
 						<label for="password"
-							>password<input type="password" name="password" id="password"
-						/></label>
+							>password<input type="password" name="password" class="passwords" id="password" pattern ="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required
+						/><p id="passwordError">*Passwords do not match</p></label>
 
 						<label for="confirmPassword"
-							>confirm password<input type="password" name="confirmPassword" id="confirmPassword"
+							>confirm password<input type="password" name="confirmPassword" class="passwords" id="confirmPassword" minlength="8" required
 						/></label>
-					</form>
-				</div>
-				<div class="footer padding">
-					<button id="createAccount" type="submit">Create Account</button>
+						</div>
+						<button id="createAccount" type="submit">Create Account</button>
 
+					</form>
+					
+				
+				<div class="footer ">
+					
 					<p>Already have an account? <a href="#">Log in</a></p>
 				</div>
 			</div>
 		</div>
+		<script src="/script.js"></script>
 	</body>
 </html>
