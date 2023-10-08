@@ -1,3 +1,8 @@
+@font-face {
+	font-family: Norse;
+	src: url(./fonts/Norse-Bold.otf);
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -7,6 +12,7 @@
 .container {
 	display: flex;
 	flex-direction: row;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .left-column {
@@ -31,6 +37,7 @@
 	background-color: rgb(0, 0, 0, 0.5);
 	margin-top: 20vh;
 	font-size: 5em;
+	font-family: Norse, sans-serif;
 }
 #logo img {
 	height: 80%;
@@ -39,19 +46,30 @@
 #copyright {
 	width: 100%;
 	text-align: center;
+	margin-bottom: 2vh;
+}
+#copyright a {
+	color: white;
 }
 
 .right-column {
 	flex: 0 0 66.66%;
 	height: 100vh;
 	background-color: #f9fafb;
+	font-weight: bold;
 }
 .padding {
 	padding: 2vw;
 }
-header {
+.header {
 	font-size: 1.5em;
 	height: 35vh;
+	padding-top: 15vh;
+	padding-left: 2vw;
+	flex: 1 1;
+}
+#lastSentence {
+	padding-top: 2vw;
 }
 form {
 	width: 100%;
@@ -76,4 +94,24 @@ label {
 }
 input {
 	height: 2rem;
+	border: 1px solid #e5e7eb;
+}
+button#createAccount {
+	color: white;
+	background-color: #596d48;
+	padding: 1em 3em;
+	border-radius: 10px;
+	font-weight: bold;
+	border: none;
+}
+
+.footer p {
+	margin-top: 2rem;
+	font-weight: normal;
+}
+
+.footer a {
+	color: #596d48;
+	text-decoration: none;
+	font-weight: bold;
 }
